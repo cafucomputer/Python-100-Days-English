@@ -1,16 +1,20 @@
 """
 绘制小猪佩奇
+Draw Peppa Pig
 """
 from turtle import *
 
 
 def nose(x,y):
     """画鼻子"""
+    """Draw nose"""
     penup()
     # 将海龟移动到指定的坐标
+    # Move turtle to specified coordinate
     goto(x,y)
     pendown()
     # 设置海龟的方向（0-东、90-北、180-西、270-南）
+    # Setup orientation of turtle head
     setheading(-30)
     begin_fill()
     a = 0.4
@@ -18,8 +22,10 @@ def nose(x,y):
         if 0 <= i < 30 or 60 <= i <90:
             a = a + 0.08
             # 向左转3度
+            # 3 degree left
             left(3)
             # 向前走
+            # forward
             forward(a)
         else:
             a = a - 0.08
@@ -33,6 +39,7 @@ def nose(x,y):
     forward(10)
     pendown()
     # 设置画笔的颜色(红, 绿, 蓝)
+    # setup pen color (Red, Green, Blue)
     pencolor(255, 155, 192)
     setheading(10)
     begin_fill()
@@ -53,6 +60,7 @@ def nose(x,y):
 
 def head(x, y):
     """画头"""
+    """Draw head"""
     color((255, 155, 192), "pink")
     penup()
     goto(x,y)
@@ -76,7 +84,9 @@ def head(x, y):
         if 0<= i < 30 or 60 <= i < 90:
             a = a + 0.08
             lt(3) #向左转3度
+                  #3 degree left
             fd(a) #向前走a的步长
+                  #a's length foward
         else:
             a = a - 0.08
             lt(3)
@@ -86,6 +96,7 @@ def head(x, y):
 
 def ears(x,y):
     """画耳朵"""
+    """Draw ears"""
     color((255, 155, 192), "pink")
     penup()
     goto(x, y)
@@ -112,6 +123,7 @@ def ears(x,y):
 
 def eyes(x,y):
     """画眼睛"""
+    """Draw eyes"""
     color((255, 155, 192), "white")
     penup()
     setheading(90)
@@ -156,6 +168,7 @@ def eyes(x,y):
 
 def cheek(x,y):
     """画脸颊"""
+    """Draw cheek"""
     color((255, 155, 192))
     penup()
     goto(x,y)
@@ -168,6 +181,7 @@ def cheek(x,y):
 
 def mouth(x,y):
     """画嘴巴"""
+    """Draw mouth"""
     color(239, 69, 19)
     penup()
     goto(x, y)
@@ -179,8 +193,10 @@ def mouth(x,y):
 
 def setting():
     """设置参数"""
+    """Setup arguments"""
     pensize(4)
     # 隐藏海龟
+    # Hide turtle
     hideturtle()
     colormode(255)
     color((255, 155, 192), "pink")
@@ -190,6 +206,7 @@ def setting():
 
 def main():
     """主函数"""
+    """Main function"""
     setting() 
     nose(-100, 100)
     head(-69, 167)
